@@ -1,0 +1,73 @@
+candidates:
+- Luffy
+- BlackBeard
+- Shanks
+compiler:
+  solc:
+    remappings:
+    - '@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.4.2'
+dependencies:
+- OpenZeppelin/openzeppelin-contracts@4.4.2
+deployedContract:
+  deployedABI:
+  - anonymous: false
+    inputs:
+    - indexed: true
+      internalType: address
+      name: previousOwner
+      type: address
+    - indexed: true
+      internalType: address
+      name: newOwner
+      type: address
+    name: OwnershipTransferred
+    type: event
+  - inputs:
+    - internalType: string
+      name: _candidate
+      type: string
+    name: addCandidate
+    outputs: []
+    stateMutability: nonpayable
+    type: function
+  - inputs:
+    - internalType: string
+      name: ''
+      type: string
+    name: candidateToVotes
+    outputs:
+    - internalType: uint256
+      name: ''
+      type: uint256
+    stateMutability: view
+    type: function
+  - inputs: []
+    name: owner
+    outputs:
+    - internalType: address
+      name: ''
+      type: address
+    stateMutability: view
+    type: function
+  - inputs: []
+    name: renounceOwnership
+    outputs: []
+    stateMutability: nonpayable
+    type: function
+  - inputs:
+    - internalType: address
+      name: newOwner
+      type: address
+    name: transferOwnership
+    outputs: []
+    stateMutability: nonpayable
+    type: function
+  - inputs:
+    - internalType: string
+      name: _candidate
+      type: string
+    name: voteCandidate
+    outputs: []
+    stateMutability: nonpayable
+    type: function
+  deployedAddress: '0xFA8d05004E4110aE1438DD92fc051a436269EBbc'
